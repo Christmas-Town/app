@@ -2,9 +2,9 @@
   "name": "forchristmas",
   "version": "0.0.1",
   "description": "For Christmas node.js app",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
