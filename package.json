@@ -1,0 +1,29 @@
+{
+  "name": "forchristmas",
+  "version": "0.0.1",
+  "description": "For Christmas node.js app",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/For-Christmas/app.git"
+  },
+  "keywords": [
+    "forchristmas"
+  ],
+  "author": "forchristmas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/For-Christmas/app/issues"
+  },
+  "homepage": "https://github.com/For-Christmas/app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "jsonfile": "^4.0.0",
+    "request": "^2.83.0"
+  }
+}
