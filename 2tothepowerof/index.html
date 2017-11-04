@@ -50,6 +50,7 @@
                 }
             }
             function generateblock() {
+                console.log("Start generate");
                 var posi = Math.floor((Math.random() * 4) + 1);
                 var blocknumber = Math.floor((Math.random() * 3) + 1);
                 if(blocknumber == 1) {
@@ -65,6 +66,7 @@
                 return returndata;
             }
             function dropblock(blockdetail) {
+                console.log("start dropping");
                 var posi = blockdetail.posi;
                 var numid = blockdetail.numid;
                 document.getElementById(posi) = numid;

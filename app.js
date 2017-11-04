@@ -12,6 +12,7 @@ app.get('/', function(req, res) {
 app.get('/2tothepowerof', function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.write(fs.readFileSync('./2tothepowerof/index.html'));
+    res.end();
 })
 
 app.listen(process.env.PORT || 5118);
