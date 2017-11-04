@@ -132,8 +132,11 @@
             });
             
             function leftkeypressed() {
-            beforeposi = posi;
+            //beforeposi = posi;
+                document.getElementById(posi).innerHTML = '';
                 posi = posi-1;
+                beforeposi = posi;
+                document.getElementById(posi).innerHTML = numid;
             }
         </script>
     </body>
