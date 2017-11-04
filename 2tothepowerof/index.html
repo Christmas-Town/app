@@ -71,16 +71,22 @@
                 var posi = blockdetail.posi;
                 var numid = blockdetail.numid;
                 document.getElementById(posi).innerHTML = numid;
-                for(i=0; i<3; i++) {
+                //for(i=0; i<3; i++) {
+                var timesrunned = 1;
+                function drop1tile() {
                     setTimeout(function() {
                         var nowtile = document.getElementById(posi);
                         posi = Number(posi)+4;
                         nowtile.innerHTML = "";
                         document.getElementById(posi).innerHTML = numid;
                         console.log("The block is at position: "+posi+" with number: "+numid);
+                        if(timesrunned != 3) {
+                            drop1tile();
+                        }
+                        timesrunned++;
                     }, delaytime);
-                    console.log("in");
                 }
+                //}
                 console.log("out");
                 /*setTimeout(function() {
                     document.getElementById(posi).innerHTML = '';
