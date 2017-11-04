@@ -7,7 +7,7 @@ app.get('/', function(req, res) {
   res.status(200).send("<h1>Please wait! The site is still developing!</h1>");
 });
 
-app.get('/2tothepowerof', function(req, res) {
+app.use('/2tothepowerof', function(req, res) {
 	res.render("test");
 })
 
