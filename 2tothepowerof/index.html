@@ -46,6 +46,7 @@
         <script>
             var blocks = [];
             var delaytime = 5000;
+            var posi, numid;
             function addclass() {
                 var alltd = document.getElementsByTagName("td");
                 for (i=0; i<alltd.length; i++) {
@@ -64,15 +65,13 @@
                     blocknumber = 8;
                 }
                 //blocks.push({post:post, numid: blocknumber});
-                var returndata = {posi:posi, numid: blocknumber};
+                posi = posi;
+                numid = blocknumber;
                 console.log(returndata);
-                return returndata;
             }
-            function dropblock(blockdetail) {
+            function dropblock() {
                 console.log("start dropping");
                 console.log(blockdetail);
-                var posi = blockdetail.posi;
-                var numid = blockdetail.numid;
                 document.getElementById(posi).innerHTML = numid;
                 //for(i=0; i<3; i++) {
                 var timesrunned = 1;
@@ -109,21 +108,25 @@
             $(document).keydown(function(e) {
                 switch(e.which) {
                     case 37: // left
-                    alert("left");
+                    leftkeypressed();
 
                     case 38: // up
-                        //function(){alert("up");}
+                    upkeypressed();
 
                     case 39: // right
-                    break;
+                    rightkeypressed();
 
                     case 40: // down
-                    break;
+                    downkeypressed();
 
                     default: return; // exit this handler for other keys
                 }
                 e.preventDefault(); // prevent the default action (scroll / move caret)
             });
+            
+            function leftkeypressed() {
+                posi = posi-1;
+            }
         </script>
     </body>
 </html>
