@@ -14,6 +14,8 @@
         <script></script>
     </head>
     <body>
+        <input type="text" id="sectowaitinput" /><button onclick='main(document.getElementById("sectowaitinput").innerHTML, 2)'>Start</button>
+        <br /><hr /><br />
         <table>
             <tr>
                 <td id="1"></td>
@@ -93,11 +95,13 @@
                     document.getElementById(posi).innerHTML = '';
                 }, delaytime);*/
             }
-            function main() {
+            function main(sectowait, timestorun) {
+                delaytime = Number(sectowait)*1000;
                 addclass();
-                dropblock(generateblock());
+                for(i=0; i<timestorun; i++) {
+                    dropblock(generateblock());
+                }
             }
-            main();
         </script>
     </body>
 </html>
