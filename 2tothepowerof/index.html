@@ -76,6 +76,7 @@
                 //for(i=0; i<3; i++) {
                 var timesrunned = 1;
                 function drop1tile() {
+                    console.log("in "+delaytime);
                     setTimeout(function() {
                         var nowtile = document.getElementById(posi);
                         posi = Number(posi)+4;
@@ -97,6 +98,7 @@
             }
             function main(sectowait, timestorun) {
                 delaytime = Number(sectowait)*1000;
+                console.log(delaytime);
                 addclass();
                 for(i=0; i<timestorun; i++) {
                     dropblock(generateblock());
