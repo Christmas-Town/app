@@ -77,9 +77,10 @@
                 function drop1tile() {
                     console.log("in "+delaytime);
                     setTimeout(function() {
+                        console.log("beforenow: "+posi);
                         var nowtile = document.getElementById(posi);
                         console.log("before: "+posi);
-                        posi = Number(posi)+4;
+                        posi = posi+4;
                         console.log("after: "+posi);
                         nowtile.innerHTML = "";
                         document.getElementById(posi).innerHTML = numid;
