@@ -79,8 +79,11 @@
                             nowtile.innerHTML = "";
                             document.getElementById(posi).innerHTML = numid;
                             console.log("The block is at position: "+posi+" with number: "+numid);
-                            resolve();
+                            resolve("drop 1");
                         }, delaytime);
+                        myFirstPromise.then((successMessage) => {
+                            console.log(successMessage);
+                        });
                     });
                     console.log("in");
                 }
