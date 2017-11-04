@@ -71,53 +71,16 @@
                 var posi = blockdetail.posi;
                 var numid = blockdetail.numid;
                 document.getElementById(posi).innerHTML = numid;
-                //for(i=0; i<3; i++) {
-                    let dropfunc1 = new Promise((resolve, reject) => {
-                        setTimeout(function() {
-                            var nowtile = document.getElementById(posi);
-                            posi = Number(posi)+4;
-                            nowtile.innerHTML = "";
-                            document.getElementById(posi).innerHTML = numid;
-                            console.log("The block is at position: "+posi+" with number: "+numid);
-                            resolve("drop 1");
-                        }, delaytime);
-                        
-                    });
-                    dropfunc1.then((successMessage) => {
-                            console.log(successMessage);
-                        });
+                for(i=0; i<3; i++) {
+                    setTimeout(function() {
+                        var nowtile = document.getElementById(posi);
+                        posi = Number(posi)+4;
+                        nowtile.innerHTML = "";
+                        document.getElementById(posi).innerHTML = numid;
+                        console.log("The block is at position: "+posi+" with number: "+numid);
+                    }, delaytime);
                     console.log("in");
-                    let dropfunc1 = new Promise((resolve, reject) => {
-                        setTimeout(function() {
-                            var nowtile = document.getElementById(posi);
-                            posi = Number(posi)+4;
-                            nowtile.innerHTML = "";
-                            document.getElementById(posi).innerHTML = numid;
-                            console.log("The block is at position: "+posi+" with number: "+numid);
-                            resolve("drop 1");
-                        }, delaytime);
-                        
-                    });
-                    dropfunc1.then((successMessage) => {
-                            console.log(successMessage);
-                        });
-                    console.log("in");
-                    let dropfunc1 = new Promise((resolve, reject) => {
-                        setTimeout(function() {
-                            var nowtile = document.getElementById(posi);
-                            posi = Number(posi)+4;
-                            nowtile.innerHTML = "";
-                            document.getElementById(posi).innerHTML = numid;
-                            console.log("The block is at position: "+posi+" with number: "+numid);
-                            resolve("drop 1");
-                        }, delaytime);
-                        
-                    });
-                    dropfunc1.then((successMessage) => {
-                            console.log(successMessage);
-                        });
-                    console.log("in");
-                //}
+                }
                 console.log("out");
                 /*setTimeout(function() {
                     document.getElementById(posi).innerHTML = '';
