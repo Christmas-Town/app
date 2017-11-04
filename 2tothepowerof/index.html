@@ -75,15 +75,14 @@
                     setTimeout(function() {
                         var nowtile = document.getElementById(posi);
                         posi = Number(posi)+4;
-                        console.log(posi);
-                        console.log(numid);
                         nowtile.innerHTML = "";
                         document.getElementById(posi).innerHTML = numid;
+                        console.log("The block is at position: "+posi+" with number: )+numid";
                     }, delaytime);
                 }
                 setTimeout(function() {
                     document.getElementById(posi).innerHTML = '';
-                });
+                }, delaytime);
             }
             function main() {
                 addclass();
