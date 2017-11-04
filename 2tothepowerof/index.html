@@ -86,7 +86,7 @@
                         //nowtile.innerHTML = "";
                         document.getElementById(posi).innerHTML = numid;
                         console.log("The block is at position: "+posi+" with number: "+numid);
-                        if(Math.ceil(posi/4) == 4) {
+                        if(Math.ceil((posi-1)/4) == 4) {
                             drop1tile();
                         }
                     }, delaytime);
@@ -134,7 +134,7 @@
                 beforeposi = posi;
                 
                 posi = posi-1;
-                if(Math.ceil(posi/4) == Math.ceil(beforeposi/4) && beforeposi != 1) {
+                if(Math.ceil((posi-1)/4) == Math.ceil((beforeposi-1)/4) && beforeposi != 1) {
                     console.log("ok to move");
                     document.getElementById(beforeposi).innerHTML = '';
                     document.getElementById(posi).innerHTML = numid;
