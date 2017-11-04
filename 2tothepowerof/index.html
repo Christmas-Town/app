@@ -78,11 +78,12 @@
                     console.log("in "+delaytime);
                     setTimeout(function() {
                         console.log("beforenow: "+posi);
-                        var nowtile = document.getElementById(posi);
-                        console.log("before: "+posi);
+                        document.getElementById(beforeposi).innerHTML = '';
+                        console.log("before: "+beforeposi);
                         posi = posi+4;
+                        var beforeposi = posi;
                         console.log("after: "+posi);
-                        nowtile.innerHTML = "";
+                        //nowtile.innerHTML = "";
                         document.getElementById(posi).innerHTML = numid;
                         console.log("The block is at position: "+posi+" with number: "+numid);
                         if(timesrunned != 3) {
