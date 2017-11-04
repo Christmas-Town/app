@@ -69,7 +69,7 @@
                 console.log("start dropping");
                 var posi = blockdetail.posi;
                 var numid = blockdetail.numid;
-                document.getElementById(posi) = numid;
+                document.getElementById(posi).innerHTML = numid;
                 for(i=0; i<4; i++) {
                     setTimeout(function() {
                         var nowtile = document.getElementById(posi);
