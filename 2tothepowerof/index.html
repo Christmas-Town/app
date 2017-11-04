@@ -72,7 +72,7 @@
                 var numid = blockdetail.numid;
                 document.getElementById(posi).innerHTML = numid;
                 for(i=0; i<3; i++) {
-                    var drop1tile = new Promise((resolve, reject) => {
+                    new Promise((resolve, reject) => {
                         setTimeout(function() {
                             var nowtile = document.getElementById(posi);
                             posi = Number(posi)+4;
