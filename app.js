@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 
+var fs = require('fs');
+
 app.set('view engine', 'pug');
 
 app.get('/', function(req, res) {
@@ -8,7 +10,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/2tothepowerof', function (req, res) {
-  res.render('test', { title: 'Hey', message: 'Hello there!' })
+    res.status(200).send(fs.readFileSync('./2tothepowerof/index.html'));
 })
 
 app.listen(process.env.PORT || 5118);

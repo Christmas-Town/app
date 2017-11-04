@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Andrew's self-built 2tothepowerof game</title>
+        <style>
+            td {
+                background: black;
+                color: white;
+                width:30px;
+                height:30px;
+                text-align:center;
+            }
+        </style>
+        <script></script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td id="1"></td>
+                <td id="2"></td>
+                <td id="3"></td>
+                <td id="4"></td>
+            </tr>
+            <tr>
+                <td id="5"></td>
+                <td id="6"></td>
+                <td id="7"></td>
+                <td id="8"></td>
+            </tr>
+            <tr>
+                <td id="9"></td>
+                <td id="10"></td>
+                <td id="11"></td>
+                <td id="12"></td>
+            </tr>
+            <tr>
+                <td id="13"></td>
+                <td id="14"></td>
+                <td id="15"></td>
+                <td id="16"></td>
+            </tr>
+        </table>
+        <script>
+            var blocks = [];
+            var delaytime = 1000;
+            function addclass() {
+                var alltd = document.getElementsByTagName("td");
+                for (i=0; i<alltd.length; i++) {
+                    alltd[i].className = Math.floor(Number(alltd[i].id)/4);
+                }
+            }
+            function generateblock() {
+                var posi = Math.floor((Math.random() * 4) + 1);
+                var blocknumber = Math.floor((Math.random() * 3) + 1);
+                if(blocknumber == 1) {
+                    blocknumber = 2;
+                } else if(blocknumber == 2) {
+                    blocknumber = 4;
+                } else if(blocknumber == 3) {
+                    blocknumber = 8;
+                }
+                //blocks.push({post:post, numid: blocknumber});
+                return {post:post, numid: blocknumber};
+            }
+            function dropblock(blockdetail) {
+                var posi = blockdetail.posi;
+                var numid = blockdetail.numid;
+                document.getElementById(posi) = numid;
+                for(i=0; i<4; i++) {
+                    setTimeout(function() {
+                        var nowtile = document.getElementById(posi);
+                        posi = Number(posi)+4;
+                        nowtile.innerHTML = "";
+                        document.getElementById(posi).innerHTML = blockdetail;
+                    }, delaytime);
+                }
+                setTimeout(function() {
+                    document.getElementById(posi).innerHTML = '';
+                });
+            }
+            function main() {
+                addclass();
+                dropblock();
+            }
+        </script>
+    </body>
+</html>
