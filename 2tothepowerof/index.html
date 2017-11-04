@@ -55,7 +55,7 @@
             }
             function generateblock() {
                 console.log("Start generate");
-                var posi = Math.floor((Math.random() * 4) + 1);
+                posi = Math.floor((Math.random() * 4) + 1);
                 var blocknumber = Math.floor((Math.random() * 3) + 1);
                 if(blocknumber == 1) {
                     blocknumber = 2;
@@ -65,7 +65,7 @@
                     blocknumber = 8;
                 }
                 //blocks.push({post:post, numid: blocknumber});
-                posi = posi;
+                //posi = posi;
                 numid = blocknumber;
             }
             function dropblock() {
