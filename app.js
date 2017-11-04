@@ -7,8 +7,8 @@ app.get('/', function(req, res) {
   res.status(200).send("<h1>Please wait! The site is still developing!</h1>");
 });
 
-app.use('/2tothepowerof', function(req, res) {
-	res.render("test");
+app.get('/2', function (req, res) {
+  res.render('test', { title: 'Hey', message: 'Hello there!' })
 })
 
 app.listen(process.env.PORT || 5118);
