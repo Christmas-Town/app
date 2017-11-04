@@ -135,7 +135,7 @@
                 beforeposi = posi;
                 
                 posi = posi-1;
-                if(Math.floor(posi/4) == Math.floor(beforeposi/4)) {
+                if(Math.floor(posi/4) == Math.floor(beforeposi/4) && beforeposi != 1) {
                     console.log("ok to move");
                     document.getElementById(beforeposi).innerHTML = '';
                     document.getElementById(posi).innerHTML = numid;
