@@ -74,14 +74,15 @@
                 document.getElementById(posi).innerHTML = numid;
                 //for(i=0; i<3; i++) {
                 var timesrunned = 1;
+                var beforeposi;
                 function drop1tile() {
                     console.log("in "+delaytime);
                     setTimeout(function() {
                         console.log("beforenow: "+posi);
                         document.getElementById(beforeposi || posi).innerHTML = '';
+                        beforeposi = posi;
                         console.log("before: "+beforeposi);
                         posi = posi+4;
-                        var beforeposi = posi;
                         console.log("after: "+posi);
                         //nowtile.innerHTML = "";
                         document.getElementById(posi).innerHTML = numid;
