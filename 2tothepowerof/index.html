@@ -60,7 +60,9 @@
                     blocknumber = 8;
                 }
                 //blocks.push({post:post, numid: blocknumber});
-                return {post:post, numid: blocknumber};
+                var returndata = {post:post, numid: blocknumber};
+                console.log(returndata);
+                return returndata;
             }
             function dropblock(blockdetail) {
                 var posi = blockdetail.posi;
