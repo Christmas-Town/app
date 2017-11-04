@@ -78,13 +78,13 @@
                     console.log("in "+delaytime);
                     setTimeout(function() {
                         console.log("beforenow: "+posi);
-                        document.getElementById(beforeposi).innerHTML = '';
+                        document.getElementById(beforeposi.toString()).innerHTML = '';
                         console.log("before: "+beforeposi);
                         posi = posi+4;
                         var beforeposi = posi;
                         console.log("after: "+posi);
                         //nowtile.innerHTML = "";
-                        document.getElementById(posi).innerHTML = numid;
+                        document.getElementById(posi.toString()).innerHTML = numid;
                         console.log("The block is at position: "+posi+" with number: "+numid);
                         if(timesrunned != 3) {
                             drop1tile();
