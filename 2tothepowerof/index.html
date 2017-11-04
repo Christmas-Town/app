@@ -80,6 +80,7 @@
                     setTimeout(function() {
                         console.log("beforenow: "+posi);
                         document.getElementById(posi).innerHTML = '';
+                        beforeposi = posi;
                         posi = posi+4;
                         console.log("after: "+posi);
                         //nowtile.innerHTML = "";
@@ -132,9 +133,12 @@
             
             function leftkeypressed() {
             //beforeposi = posi;
-                document.getElementById(posi).innerHTML = '';
+                
                 posi = posi-1;
-                document.getElementById(posi).innerHTML = numid;
+                if(Math.floor(posi/4) == Math.floor(beforeposi/4)) {
+                    document.getElementById(beforeposi).innerHTML = '';
+                    document.getElementById(posi).innerHTML = numid;
+                }
             }
         </script>
     </body>
