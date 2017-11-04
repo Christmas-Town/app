@@ -108,12 +108,12 @@
             //key setting
             
             $(document).keydown(function(e) {
-                switch(e.which) {
+                /*switch(e.which) {
                     case 37: // left
                     leftkeypressed();
 
                     case 38: // up
-                    upkeypressed();
+                    leftkeypressed();
 
                     case 39: // right
                     rightkeypressed();
@@ -122,6 +122,10 @@
                     downkeypressed();
 
                     default: return; // exit this handler for other keys
+                }*/
+                
+                if(e.keyCode == 37) {
+                    leftkeypressed();
                 }
                 e.preventDefault(); // prevent the default action (scroll / move caret)
             });
