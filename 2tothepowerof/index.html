@@ -75,6 +75,7 @@
                     setTimeout(function() {
                         var nowtile = document.getElementById(posi);
                         posi = Number(posi)+4;
+                        console.log(posi);
                         nowtile.innerHTML = "";
                         document.getElementById(posi).innerHTML = numid;
                     }, delaytime);
