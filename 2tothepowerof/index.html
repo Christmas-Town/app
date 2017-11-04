@@ -44,6 +44,7 @@
             </tr>
         </table>
         <script>
+			var projectver = 1;
             var blocks = [];
             var delaytime = 5000;
             var posi, numid, beforeposi;
@@ -99,6 +100,7 @@
                 }, delaytime);*/
             }
             function main(sectowait, timestorun) {
+				console.log("Project version: "+projectver);
                 delaytime = sectowait*1000;
                 console.log(delaytime);
                 addclass();
