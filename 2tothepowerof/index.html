@@ -11,6 +11,7 @@
                 text-align:center;
             }
         </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script></script>
     </head>
     <body>
@@ -100,10 +101,29 @@
                 delaytime = sectowait*1000;
                 console.log(delaytime);
                 addclass();
-                for(i=0; i<timestorun; i++) {
-                    dropblock(generateblock());
-                }
+                dropblock(generateblock());
             }
+            
+            //key setting
+            
+            $(document).keydown(function(e) {
+                switch(e.which) {
+                    case 37: // left
+                        function(alert("left"));
+
+                    case 38: // up
+                        function(alert("up"));
+
+                    case 39: // right
+                    break;
+
+                    case 40: // down
+                    break;
+
+                    default: return; // exit this handler for other keys
+                }
+                e.preventDefault(); // prevent the default action (scroll / move caret)
+            });
         </script>
     </body>
 </html>
