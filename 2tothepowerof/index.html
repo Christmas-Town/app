@@ -71,11 +71,12 @@
                 var posi = blockdetail.posi;
                 var numid = blockdetail.numid;
                 document.getElementById(posi).innerHTML = numid;
-                for(i=0; i<4; i++) {
+                for(i=0; i<3; i++) {
                     setTimeout(function() {
                         var nowtile = document.getElementById(posi);
                         posi = Number(posi)+4;
                         console.log(posi);
+                        console.log(numid);
                         nowtile.innerHTML = "";
                         document.getElementById(posi).innerHTML = numid;
                     }, delaytime);
