@@ -72,7 +72,7 @@
                 var numid = blockdetail.numid;
                 document.getElementById(posi).innerHTML = numid;
                 //for(i=0; i<3; i++) {
-                    let droppromise = new Promise((resolve, reject) => {
+                    let dropfunc1 = new Promise((resolve, reject) => {
                         setTimeout(function() {
                             var nowtile = document.getElementById(posi);
                             posi = Number(posi)+4;
@@ -83,11 +83,11 @@
                         }, delaytime);
                         
                     });
-                    droppromise.then((successMessage) => {
+                    dropfunc1.then((successMessage) => {
                             console.log(successMessage);
                         });
                     console.log("in");
-                    let droppromise = new Promise((resolve, reject) => {
+                    let dropfunc1 = new Promise((resolve, reject) => {
                         setTimeout(function() {
                             var nowtile = document.getElementById(posi);
                             posi = Number(posi)+4;
@@ -98,11 +98,11 @@
                         }, delaytime);
                         
                     });
-                    droppromise.then((successMessage) => {
+                    dropfunc1.then((successMessage) => {
                             console.log(successMessage);
                         });
                     console.log("in");
-                    let droppromise = new Promise((resolve, reject) => {
+                    let dropfunc1 = new Promise((resolve, reject) => {
                         setTimeout(function() {
                             var nowtile = document.getElementById(posi);
                             posi = Number(posi)+4;
@@ -113,7 +113,7 @@
                         }, delaytime);
                         
                     });
-                    droppromise.then((successMessage) => {
+                    dropfunc1.then((successMessage) => {
                             console.log(successMessage);
                         });
                     console.log("in");
