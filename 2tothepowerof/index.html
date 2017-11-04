@@ -127,6 +127,9 @@
                 if(e.keyCode == 37) {
                     leftkeypressed();
                 }
+                if(e.keyCode == 39) {
+                    rightkeypressed();
+                }
                 //e.preventDefault(); // prevent the default action (scroll / move caret)
             });
             
@@ -141,6 +144,19 @@
                     document.getElementById(posi).innerHTML = numid;
                 } else {
                     posi = posi+1;
+                }
+            }
+            function rightkeypressed() {
+                beforeposi = posi;
+                
+                posi = posi+1;
+                console.log(Math.floor((posi-1)/4)+" "+Math.floor((beforeposi-1)/4));
+                if(Math.floor((posi-1)/4) == Math.floor((beforeposi-1)/4) && beforeposi != 1) {
+                    console.log("ok to move");
+                    document.getElementById(beforeposi).innerHTML = '';
+                    document.getElementById(posi).innerHTML = numid;
+                } else {
+                    posi = posi-1;
                 }
             }
         </script>
