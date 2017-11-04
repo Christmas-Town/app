@@ -72,7 +72,7 @@
                 var numid = blockdetail.numid;
                 document.getElementById(posi).innerHTML = numid;
                 for(i=0; i<3; i++) {
-                    new Promise((resolve, reject) => {
+                    let droppromise = new Promise((resolve, reject) => {
                         setTimeout(function() {
                             var nowtile = document.getElementById(posi);
                             posi = Number(posi)+4;
@@ -81,7 +81,7 @@
                             console.log("The block is at position: "+posi+" with number: "+numid);
                             resolve("drop 1");
                         }, delaytime);
-                        myFirstPromise.then((successMessage) => {
+                        droppromise.then((successMessage) => {
                             console.log(successMessage);
                         });
                     });
