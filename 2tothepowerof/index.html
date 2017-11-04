@@ -78,7 +78,9 @@
                     console.log("in "+delaytime);
                     setTimeout(function() {
                         var nowtile = document.getElementById(posi);
+                        console.log("before: "+posi);
                         posi = Number(posi)+4;
+                        console.log("after: "+posi);
                         nowtile.innerHTML = "";
                         document.getElementById(posi).innerHTML = numid;
                         console.log("The block is at position: "+posi+" with number: "+numid);
