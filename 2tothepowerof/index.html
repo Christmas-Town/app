@@ -134,6 +134,7 @@
                 beforeposi = posi;
                 
                 posi = posi-1;
+                console.log(Math.ceil((posi-1)/4)+" "+Math.ceil((beforeposi-1)/4)")
                 if(Math.ceil((posi-1)/4) == Math.ceil((beforeposi-1)/4) && beforeposi != 1) {
                     console.log("ok to move");
                     document.getElementById(beforeposi).innerHTML = '';
