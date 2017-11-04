@@ -73,7 +73,7 @@
                 console.log("start dropping");
                 document.getElementById(posi).innerHTML = numid;
                 //for(i=0; i<3; i++) {
-                var timesrunned = 1;
+                //var timesrunned = 1;
                 
                 function drop1tile() {
                     console.log("in "+delaytime);
@@ -86,7 +86,7 @@
                         //nowtile.innerHTML = "";
                         document.getElementById(posi).innerHTML = numid;
                         console.log("The block is at position: "+posi+" with number: "+numid);
-                        if(timesrunned != 3) {
+                        if(Math.ceil(posi/4) == 4) {
                             drop1tile();
                         }
                         timesrunned++;
@@ -135,7 +135,7 @@
                 beforeposi = posi;
                 
                 posi = posi-1;
-                if(Math.floor(posi/4) == Math.floor(beforeposi/4) && beforeposi != 1) {
+                if(Math.ceil(posi/4) == Math.ceil(beforeposi/4) && beforeposi != 1) {
                     console.log("ok to move");
                     document.getElementById(beforeposi).innerHTML = '';
                     document.getElementById(posi).innerHTML = numid;
