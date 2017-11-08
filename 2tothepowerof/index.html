@@ -44,7 +44,9 @@
             </tr>
         </table>
         <script>
-			var projectver = 1;
+			var projectver = 2;
+            var commitmsg = "add blocks array";
+            console.log("Project version: "+projectver+" last commit message: "+commitmsg);
             var blocks = [null, undefined];
             var delaytime = 5000;
             var posi, numid, beforeposi;
@@ -100,7 +102,7 @@
                 }, delaytime);*/
             }
             function main(sectowait, timestorun) {
-				console.log("Project version: "+projectver);
+				
                 for(i=1; i<17; i++) {
                     blocks[i] = undefined;
                 }
