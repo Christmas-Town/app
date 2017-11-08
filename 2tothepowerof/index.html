@@ -44,7 +44,7 @@
             </tr>
         </table>
         <script>
-			var projectver = 2.51;
+			var projectver = 2.52;
             var commitmsg = "add blocks array and intergrate with the dropping function";
             console.log("Project version: "+projectver+" last commit message: "+commitmsg);
             var blocks = [null, undefined];
@@ -78,6 +78,7 @@
                 blocks[posi] = numid;
                 //for(i=0; i<3; i++) {
                 //var timesrunned = 1;
+                var tmplaterposi;
                 
                 function drop1tile() {
                     console.log("in "+delaytime);
@@ -92,8 +93,9 @@
                         document.getElementById(posi).innerHTML = numid;
                         blocks[posi] = numid;
                         console.log("The block is at position: "+posi+" with number: "+numid);
-                        console.log("later: "+blocks[(Number(posi)+4).toString()]);
-                        if(Math.ceil((posi)/4) != 4 && !blocks[posi+4]) {
+                        tmplaterposi = posi+4;
+                        console.log("later: "+blocks[tmplaterposi+4]);
+                        if(Math.ceil((posi)/4) != 4 && !blocks[tmplaterposi+4]) {
                             drop1tile();
                         }
                     }, delaytime);
