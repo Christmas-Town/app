@@ -47,6 +47,10 @@
 			var projectver = 2.522;
             var commitmsg = "add blocks array and intergrate with the dropping function";
             console.log("Project version: "+projectver+" last commit message: "+commitmsg);
+            var unavaliable = true;
+            if(unavaliable) {
+                document.getElementsByTagName("body")[0].innerHTML = "<h1>App not avaliable!";
+            }
             var blocks = [null, undefined];
             var delaytime = 5000;
             var posi, numid, beforeposi;
