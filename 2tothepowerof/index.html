@@ -44,7 +44,7 @@
             </tr>
         </table>
         <script>
-			var projectver = 2.2;
+			var projectver = 2.3;
             var commitmsg = "add blocks array and intergrate with the dropping function";
             console.log("Project version: "+projectver+" last commit message: "+commitmsg);
             var blocks = [null, undefined];
@@ -149,6 +149,7 @@
                 posi = posi-1;
                 console.log(Math.floor((posi-1)/4)+" "+Math.floor((beforeposi-1)/4));
                 if(Math.floor((posi-1)/4) == Math.floor((beforeposi-1)/4) && beforeposi != 1 && !blocks[posi]) {
+                    console.log(blocks);
                     console.log("ok to move");
                     document.getElementById(beforeposi).innerHTML = '';
                     blocks[beforeposi] = undefined;
@@ -164,6 +165,7 @@
                 posi = posi+1;
                 console.log(Math.floor((posi-1)/4)+" "+Math.floor((beforeposi-1)/4));
                 if(Math.floor((posi-1)/4) == Math.floor((beforeposi-1)/4) && beforeposi != 1 && !blocks[posi]) {
+                    console.log(blocks);
                     console.log("ok to move");
                     document.getElementById(beforeposi).innerHTML = '';
                     blocks[beforeposi] = undefined;
