@@ -1,0 +1,29 @@
+div.topic#topic {
+    font-size: 4em;
+    background:#a5a5a5;
+    text-align:center;
+}
+vertline {
+    border-left: solid gray;
+    position: absolute;
+}
+.left3 {
+    margin-left: calc(100vw/3);
+}
+.right3 {
+    margin-left: calc(100vw/3*2);
+}
+vertline.left3 {
+    z-index:100;
+}
+vertline.right3 {
+    z-index:200;
+}
+
+controlp {
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+    border: 3px solid #6fa3f7;
+    background: #6fa3f7;
+}

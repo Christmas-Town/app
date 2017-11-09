@@ -15,4 +15,6 @@ app.get('/2tothepowerof', function (req, res) {
     res.end();
 })
 
+app.use('/note', express.static('./note'));
+
 app.listen(process.env.PORT || 5118);
