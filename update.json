@@ -1,0 +1,13 @@
+{
+    "update": [],
+    "2tothepowerof": {
+        "version": 2.522,
+        "avaliable": false,
+        "log": "add blocks array and intergrate with the dropping function"
+    },
+    "note": {
+        "version": "0.0.1",
+        "avaliable": true,
+        "log": "not updated yet"
+    }
+}
