@@ -7,7 +7,7 @@ var request = require('request');
 
 var updatelog = JSON.parse(fs.readFileSync('./update.json'));
 
-if(updatelog.update.length != 0) {
+/*if(updatelog.update.length != 0) {
   for(i=0; i<updatelog.update.length; i++) {
     request({
         har:{
@@ -22,7 +22,7 @@ if(updatelog.update.length != 0) {
     updatelog.update = [];
     fs.writeFileSync('./update.json', updatelog);
   }
-}
+}*/
 
 app.set('view engine', 'pug');
 
