@@ -3,18 +3,26 @@ var app = express();
 
 var fs = require('fs');
 
-var curl = require('node-curl');
+var request = require('request');
 
 var updatelog = JSON.parse(fs.readFileSync('./update.json'));
 
-/*if(updatelog.update.length != 0) {
+if(updatelog.update.length != 0) {
   for(i=0; i<updatelog.update.length; i++) {
-    curl('https://ascxz.ml/wp-json/wp/v2/posts', {title: "Updation for ChristmasTown "+updatelog.update[i]+" to version "+updatelog[updatelog.update[i]].version, content:updatelog[updatelog.update[i]].log }, function(err) {
-      updatelog.update = [];
-      fs.writeFileSunc('./update.json', updatelog);
-    });
+    request({
+        har:{
+            url: "https://ascxz.ml/wp-json/wp/v2/posts",
+            method:"curl",
+            postData: {
+                mimeType: "application/json",
+                params: [{title: "Updation for ChristmasTown "+updatelog.update[i]+" to version "+updatelog[updatelog.update[i]].version, content:updatelog[updatelog.update[i]].log }]
+            }
+        }
+    })
+    updatelog.update = [];
+    fs.writeFileSync('./update.json', updatelog);
   }
-}*/
+}
 
 app.set('view engine', 'pug');
 

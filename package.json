@@ -24,9 +24,7 @@
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "jsonfile": "^4.0.0",
-    "node-cron": "^1.2.1",
     "pug": "^2.0.0-rc.4",
-    "request": "^2.83.0",
-    "node-curl": "^0.3.3"
+    "request": "^2.83.0"
   }
 }
