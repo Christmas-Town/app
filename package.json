@@ -25,6 +25,7 @@
     "express-session": "^1.15.6",
     "jsonfile": "^4.0.0",
     "pug": "^2.0.0-rc.4",
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "node-curl": "^0.3.3"
   }
 }
